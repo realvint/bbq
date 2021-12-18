@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bbq</title>
+    <title><%= content_for?(:title) ? yield(:title) : "BBQ" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,27 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/header' %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 pt-2">
+          <%  if notice.present? %>
+            <div class="alert alert-success alert-dismissible">
+              <%= sanitize(notice) %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <%  elsif alert.present? %>
+            <div class="alert alert-danger alert-dismissible">
+              <%= sanitize(alert)  %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; BBQ 2021</p>
+      </footer>
+    </div>
   </body>
 </html>
