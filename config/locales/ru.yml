@@ -1,4 +1,9 @@
 ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+      event: 'Событие'
+
   shared:
     errors:
       header:
@@ -6,3 +11,69 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    header:
+      name: 'Шашлыки'
+      events: 'События'
+      log_in: 'Войти'
+      signed_up: 'Зарегистрироваться'
+      profile: 'Профиль'
+      log_out: 'Выйти'
+
+  layouts:
+    application:
+      company: ' Компания'
+
+  helpers:
+    label:
+      user:
+        email: 'Электропочта'
+        name: 'Имя'
+        avatar: 'Аватарка'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        current_password: 'Текущий пароль'
+      event:
+        title: 'Название'
+        address: 'Место проведения'
+        datetime: 'Дата и время'
+        description: 'Описание'
+    submit:
+      user:
+        update: 'Обновить'
+      event:
+        create: 'Создать'
+        update: 'Обновить'
+
+  events:
+    index:
+      events: 'События'
+      create: 'Создать событие'
+    show:
+      edit: 'Редактировать'
+    edit:
+      edit: 'Редактировать событие'
+      show: 'Показать'
+      back: 'Назад'
+    new:
+      create: 'Создать событие'
+    create:
+      created: 'Вы создали новое мероприятие'
+    update:
+      updated: 'Вы обновили мероприятие'
+    destroy:
+      destroyed: 'Вы удалили мероприятие :('
+    form:
+      back: 'Назад'
+
+  users:
+    update:
+      updated: 'Вы обновили свой профиль'
+    form:
+      back: 'Назад'
+    show:
+      edit: 'Редактировать профиль'
+      created: 'Организовал'
+      nothing_created: 'Ничего не организовано('
+    edit:
+      header: 'Редактировать профиль'
+      change_pass: 'Сменить пароль'

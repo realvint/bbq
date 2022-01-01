@@ -3,7 +3,7 @@
 
   <div class='form-control mb-3 shadow p-3 mb-5 bg-white rounded' style='width: 400px; margin: 10% auto auto;'>
     <div class='mb-3' style='margin: 25px 20px'>
-      <h2>Зарегистрироваться</h2>
+      <h2><%= t('.sign_up') %></h2>
 
       <div class='mb-3'>
         <%= f.label :email, class: 'form-label' %><br />
@@ -13,7 +13,7 @@
       <div class='mb-3'>
         <%= f.label :password, class: 'form-label' %>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <em>(<%= @minimum_password_length %> <%= t('.password_length') %>)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: 'new-password', class: 'form-control' %>
       </div>
@@ -25,7 +25,7 @@
 
       <div class="d-grid gap-2 mb-3" >
         <%= button_tag(:type => 'submit', :class => 'btn btn-success') do %>
-          <i class='fa fa-dog'></i>&nbsp Зарегистрироваться
+          <i class='fa fa-dog'></i>&nbsp <%= t('.sign_up') %>
         <% end %>
       </div>
 
