@@ -18,10 +18,12 @@ ru:
       signed_up: 'Зарегистрироваться'
       profile: 'Профиль'
       log_out: 'Выйти'
-
-  layouts:
-    application:
-      company: ' Компания'
+    footer:
+      description: 'Приложение для организации мероприятий'
+      project: 'Учебный проект школы'
+      profession: 'в рамках курса:'
+      title: 'Ruby on Rails с нуля за 18 недель'
+      author: 'Автор проекта - Малухин Виктор'
 
   helpers:
     label:
