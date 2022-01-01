@@ -3,6 +3,11 @@
   <div class="col-md-6 buffer-top">
     <h2><%= t('.edit') %></h2>
 
+    <div class='mb-3'>
+      <%= f.label :name, class: 'form-label' %><br />
+      <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+    </div>
+
     <div class="mb-3">
       <%= f.label :email, class: 'form-label' %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
