@@ -2,6 +2,5 @@
 
 <%= render 'form' %>
 <div class="pt-3 pb-3">
-  <%= link_to t('.show'), @event %> |
-  <%= link_to t('.back'), events_path %>
+  <%= link_to t('.delete'), event_path(@event), data: { confirm: t('.confirm') }, method: :delete, class: 'btn btn-outline-danger' %>
 </div>
