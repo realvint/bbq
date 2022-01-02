@@ -3,6 +3,20 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Имя'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        current_password: 'Текущий пароль'
+        remember_me: 'Запомнить меня'
+        avatar: 'Аватарка'
+      event:
+        title: 'Название'
+        address: 'Место проведения'
+        datetime: 'Дата и время'
+        description: 'Описание'
 
   shared:
     errors:
