@@ -1,7 +1,6 @@
-<h1>Editing Event</h1>
+<h1><%= t('.edit') %></h1>
 
 <%= render 'form' %>
 <div class="pt-3 pb-3">
-  <%= link_to 'Show', @event %> |
-  <%= link_to 'Back', events_path %>
+  <%= link_to t('.delete'), event_path(@event), data: { confirm: t('.confirm') }, method: :delete, class: 'btn btn-outline-danger' %>
 </div>

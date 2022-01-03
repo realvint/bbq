@@ -5,19 +5,19 @@
 
   <% if @user == current_user %>
   <p class="buffer-top">
-    <%= link_to "Редактировать профиль", edit_user_path(@user), class: 'btn btn-outline-secondary' %>
+    <%= link_to t('.edit'), edit_user_path(@user), class: 'btn btn-outline-secondary' %>
   </p>
   <% end %>
 
   <div class="row">
     <div class="col-md-12">
       <% if @user.events.any? %>
-        <h3>Организовал:</h3>
+        <h3><%= t('.created') %></h3>
         <div class="row justify-content-center">
           <%= render @user.events %>
         </div>
       <% else %>
-        <p>Никаких событий не организовано(</p>
+        <p><%= t('.nothing_created') %></p>
       <% end %>
     </div>
   </div>
