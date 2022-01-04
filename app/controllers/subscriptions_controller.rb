@@ -5,7 +5,7 @@ class SubscriptionsController < ApplicationController
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
-    if current_user != @event.user && @new_subscription.save
+    if @new_subscription.save
       redirect_to @event, notice: t('.created')
     else
       flash.alert = t('.error')
