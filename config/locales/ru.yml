@@ -4,6 +4,7 @@ ru:
       user: 'Пользователь'
       event: 'Событие'
       comment: 'Комментарий'
+      subscription: 'Подписка'
     attributes:
       user:
         email: 'Email'
@@ -21,6 +22,9 @@ ru:
       comment:
         body: 'Комментарий'
         username: 'Имя'
+      subscription:
+        user_name: 'Имя'
+        user_email: 'Электропочта'
 
   shared:
     errors:
@@ -65,6 +69,8 @@ ru:
         update: 'Обновить'
       comment:
         create: 'Добавить'
+      subscription:
+        create: 'Подписаться'
 
   events:
     index:
@@ -106,7 +112,16 @@ ru:
     create:
       created: 'Вы создали новый комментарий'
       error: 'Создать комментарий не получилось('
-
     destroy:
       destroyed: 'Комментарий совсем удалён('
       error: 'Удалить комментарий не получилось'
+
+  subscriptions:
+    subscription:
+      confirm: 'Вы хотите отписаться от данного события?'
+    create:
+      created: 'Вы подписались на событие'
+      error: 'Подписаться на событие не удалось('
+    destroy:
+      destroyed: 'Вы отписались от события('
+      error: 'Отписаться от события не удалось'
