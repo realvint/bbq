@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import 'stylesheets/application'
 import '@fortawesome/fontawesome-free/css/all'
+import './utilities/auto_hide_flash'
 
 Rails.start()
 Turbolinks.start()
