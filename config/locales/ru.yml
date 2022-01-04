@@ -3,6 +3,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      comment: 'Комментарий'
     attributes:
       user:
         email: 'Email'
@@ -17,6 +18,9 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        body: 'Комментарий'
+        username: 'Имя'
 
   shared:
     errors:
@@ -59,6 +63,8 @@ ru:
       event:
         create: 'Создать'
         update: 'Обновить'
+      comment:
+        create: 'Добавить'
 
   events:
     index:
@@ -93,3 +99,14 @@ ru:
     edit:
       header: 'Редактировать профиль'
       change_pass: 'Сменить пароль или удалиться'
+
+  comments:
+    comment:
+      confirm: 'Вы действительно хотите удалить комментарий?'
+    create:
+      created: 'Вы создали новый комментарий'
+      error: 'Создать комментарий не получилось('
+
+    destroy:
+      destroyed: 'Комментарий совсем удалён('
+      error: 'Удалить комментарий не получилось'
