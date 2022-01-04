@@ -13,4 +13,8 @@ module ApplicationHelper
   def github_url(author, repo)
     link_to 'BBQ', "https://github.com/#{author}/#{repo}", target: '_blank'
   end
+
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
 end
