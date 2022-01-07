@@ -5,6 +5,7 @@ ru:
       event: 'Событие'
       comment: 'Комментарий'
       subscription: 'Подписка'
+      photo: 'Фотография'
     attributes:
       user:
         email: 'Email'
@@ -26,6 +27,8 @@ ru:
         user: 'Пользователь'
         user_name: 'Имя'
         user_email: 'Электропочта'
+      photo:
+        photo: 'Фотография'
 
   shared:
     errors:
@@ -72,6 +75,8 @@ ru:
         create: 'Добавить'
       subscription:
         create: 'Подписаться'
+      photo:
+        create: 'Загрузить'
 
   events:
     index:
@@ -105,7 +110,7 @@ ru:
       back: 'Назад'
     show:
       edit: 'Редактировать профиль'
-      created: 'Организовал'
+      created: 'Организовал:'
       nothing_created: 'Ничего не организовано('
     edit:
       header: 'Редактировать профиль'
@@ -130,3 +135,13 @@ ru:
     destroy:
       destroyed: 'Вы отписались от события('
       error: 'Отписаться от события не удалось'
+
+  photos:
+    photo:
+      creator: 'Добавил:'
+    create:
+      created: 'Фотография успешно добавлена'
+      error: 'Ошибка добавления фотографии'
+    destroy:
+      destroyed: 'Фотография удалена'
+      error: 'Ошибка удаления фотографии'
