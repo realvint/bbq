@@ -11,6 +11,7 @@ class EventsController < ApplicationController
     @new_comment = @event.comments.build(params[:comment])
     @new_subscription = @event.subscriptions.build(params[:subscription])
     @all_event_subscribers = @event.subscriptions.except(@new_subscription)
+    @new_photo = @event.photos.build(params[:photo])
   end
 
   def new

@@ -12,6 +12,12 @@
   </div>
 
   <div class="mt-3">
+    <%= f.label :avatar, class: 'form-label' %>
+    <p><%= image_tag(@user.avatar.thumb.url, class: "round-avatar", alt: "user avatar") if @user.avatar? %></p>
+    <%= f.file_field :avatar, class: 'form-control' %>
+  </div>
+
+  <div class="mt-3">
     <%= f.submit class: 'btn btn-primary' %>
     <%= link_to t('.back'), :back, class: 'btn btn-outline-secondary' %>
   </div>
