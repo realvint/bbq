@@ -8,8 +8,8 @@ class Subscription < ApplicationRecord
   validates :user_email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }, unless: -> { user.present? }
   validates :user, uniqueness: { scope: :event_id }, if: -> { user.present? }
   validates :user_email, uniqueness: { scope: :event_id }, unless: -> { user.present? }
-  validate :self_event, if: -> { user.present? }
-  validate :email_exist, unless: -> { user.present? }
+  validate :not_own_event, if: -> { user.present? }
+  validate :email_is_not_taken, unless: -> { user.present? }
 
   def user_name
     user&.name || super
@@ -25,11 +25,11 @@ class Subscription < ApplicationRecord
     user_email&.downcase!
   end
 
-  def self_event
-    errors.add(:user, :error_self_event) if event.user == user
+  def not_own_event
+    errors.add(:user, :taken) if event.user == user
   end
 
-  def email_exist
-    errors.add(:user_email, :error_email_exist) if User.find_by(email: user_email)
+  def email_is_not_taken
+    errors.add(:user_email, :taken) if User.find_by(email: user_email)
   end
 end

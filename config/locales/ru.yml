@@ -26,14 +26,6 @@ ru:
         user: 'Пользователь'
         user_name: 'Имя'
         user_email: 'Электропочта'
-    errors:
-      models:
-        subscription:
-          attributes:
-            user:
-              error_self_event: 'не может подписаться на своё событие!'
-            user_email:
-              error_email_exist: 'не может быть использована.'
 
   shared:
     errors:
