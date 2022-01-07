@@ -3,6 +3,8 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      comment: 'Комментарий'
+      subscription: 'Подписка'
     attributes:
       user:
         email: 'Email'
@@ -17,6 +19,13 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        body: 'Комментарий'
+        username: 'Имя'
+      subscription:
+        user: 'Пользователь'
+        user_name: 'Имя'
+        user_email: 'Электропочта'
 
   shared:
     errors:
@@ -59,6 +68,10 @@ ru:
       event:
         create: 'Создать'
         update: 'Обновить'
+      comment:
+        create: 'Добавить'
+      subscription:
+        create: 'Подписаться'
 
   events:
     index:
@@ -66,6 +79,10 @@ ru:
       create: 'Создать событие'
     show:
       edit: 'Редактировать'
+      join: 'Я пойду!'
+      nothing_to_go: 'Пока никто не хочет посетить это событие'
+      inviter: 'Приглашает:'
+      ready_to_go: 'Пойдут:'
     edit:
       edit: 'Редактировать событие'
       delete: 'Удалить'
@@ -93,3 +110,23 @@ ru:
     edit:
       header: 'Редактировать профиль'
       change_pass: 'Сменить пароль или удалиться'
+
+  comments:
+    comment:
+      confirm: 'Вы действительно хотите удалить комментарий?'
+    create:
+      created: 'Вы создали новый комментарий'
+      error: 'Создать комментарий не получилось('
+    destroy:
+      destroyed: 'Комментарий совсем удалён('
+      error: 'Удалить комментарий не получилось'
+
+  subscriptions:
+    subscription:
+      confirm: 'Вы хотите отписаться от данного события?'
+    create:
+      created: 'Вы подписались на событие'
+      error: 'Подписаться на событие не удалось('
+    destroy:
+      destroyed: 'Вы отписались от события('
+      error: 'Отписаться от события не удалось'

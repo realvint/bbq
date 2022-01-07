@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,18 +16,8 @@
     <%= render 'shared/header' %>
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-lg-12 pt-2">
-          <%  if notice.present? %>
-            <div class="alert alert-success alert-dismissible">
-              <%= sanitize(notice) %>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          <%  elsif alert.present? %>
-            <div class="alert alert-danger alert-dismissible">
-              <%= sanitize(alert)  %>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          <% end %>
+        <div class="col-md-12 col-lg-12 pt-3">
+          <%= render 'shared/flash', flash: flash %>
           <%= yield %>
         </div>
       </div>

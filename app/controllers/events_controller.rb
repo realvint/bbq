@@ -8,6 +8,9 @@ class EventsController < ApplicationController
   end
 
   def show
+    @new_comment = @event.comments.build(params[:comment])
+    @new_subscription = @event.subscriptions.build(params[:subscription])
+    @all_event_subscribers = @event.subscriptions.except(@new_subscription)
   end
 
   def new
