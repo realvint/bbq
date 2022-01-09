@@ -9,6 +9,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 gem 'carrierwave', '~> 2.0'
 gem 'devise'
+gem 'devise-i18n'
 gem 'fog-aws'
 gem 'mailjet'
 gem 'rails-i18n', '~> 6.0.0'
