@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @new_comment.user = current_user
 
     if @new_comment.save
+      notify_subscribers(@new_comment)
       redirect_to @event, notice: t('.created')
     else
       render 'events/show', alert: t('.error')
@@ -34,5 +35,13 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body, :username)
+  end
+
+  def notify_subscribers(comment)
+    all_emails = (@event.subscriptions.map(&:user_email) + [@event.user.email] - [comment.user&.email]).uniq
+
+    all_emails.each do |mail|
+      EventMailer.comment(comment, mail).deliver_later
+    end
   end
 end

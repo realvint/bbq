@@ -145,3 +145,21 @@ ru:
     destroy:
       destroyed: 'Фотография удалена'
       error: 'Ошибка удаления фотографии'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+      subject: "Новый комментарий у события: %{event}"
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+      subject: "Новая подписка на %{event}"
