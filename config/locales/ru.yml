@@ -151,7 +151,7 @@ ru:
       title: 'Новый комментарий'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата проведения'
       owner: 'Организатор'
       subject: 'Новый комментарий у события: %{event}'
     subscription:
@@ -160,7 +160,7 @@ ru:
       email: 'Email'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата проведения'
       owner: 'Организатор'
       subject: 'Новая подписка на %{event}'
     photo:
@@ -169,6 +169,6 @@ ru:
       email: 'Email'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Дата'
+      datetime: 'Дата проведения'
       owner: 'Организатор'
       subject: 'Новая фотография у события: %{event}'
