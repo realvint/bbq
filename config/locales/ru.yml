@@ -8,7 +8,7 @@ ru:
       photo: 'Фотография'
     attributes:
       user:
-        email: 'Email'
+        email: 'Электропочта'
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
