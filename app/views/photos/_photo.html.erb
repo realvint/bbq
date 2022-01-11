@@ -1,5 +1,10 @@
-<div class="event-photo pe-1">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %> <br />
-  <div class="text-small"><%= t('.creator') %></div>
-  <%= render partial: 'users/user', object: photo.user %>
+<div class="event-photo pb-1">
+  <% footer = "#{t('.creator')} #{render partial: 'users/user', object: photo.user}" %>
+    <% if current_user_can_edit?(photo) %>
+      <% footer << link_to( fa_icon('trash'), event_photo_path(photo.event, photo),
+                            method: :delete, data: {confirm: t('.confirm')} ) %>
+    <% end %>
+
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, class: 'lightbox',
+              data: {gallery: 'gallery', footer: footer } %>
 </div>
