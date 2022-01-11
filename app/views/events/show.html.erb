@@ -32,6 +32,9 @@
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
         <% if current_user %>
+          <div class="buffer-both">
+            <%= link_to t('.add'), '#', class: 'event-photo-form-link', id: 'event-photo-form-link' %>
+          </div>
           <div class="event-photo-form">
             <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
           </div>

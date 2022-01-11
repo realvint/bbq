@@ -1,12 +1,13 @@
 <%= form_for [@event, photo], html: { multipart: true } do |f| %>
   <%= render 'shared/errors', resource:photo %>
+  <div class="hide" id='event-photo-form'>
+    <div class="my-3">
+      <%= f.label :photo, class: 'form-label' %>
+      <%= f.file_field :photo, class: 'form-control' %>
+    </div>
 
-  <div class="my-3">
-    <%= f.label :photo, class: 'form-label' %>
-    <%= f.file_field :photo, class: 'form-control' %>
-  </div>
-
-  <div class="mb-3">
-    <%= f.submit class: 'btn btn-primary' %>
+    <div class="mb-3">
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
   </div>
 <% end %>
