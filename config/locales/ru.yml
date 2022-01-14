@@ -8,7 +8,7 @@ ru:
       photo: 'Фотография'
     attributes:
       user:
-        email: 'Email'
+        email: 'Электропочта'
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
@@ -33,10 +33,10 @@ ru:
   shared:
     errors:
       header:
-        few: "Обнаружено %{count} ошибки"
-        many: "Обнаружено %{count} ошибок"
-        one: "Обнаружена %{count} ошибка"
-        other: "Обнаружено %{count} ошибки"
+        few: 'Обнаружено %{count} ошибки'
+        many: 'Обнаружено %{count} ошибок'
+        one: 'Обнаружена %{count} ошибка'
+        other: 'Обнаружено %{count} ошибки'
     header:
       name: 'Шашлыки'
       events: 'События'
@@ -145,3 +145,30 @@ ru:
     destroy:
       destroyed: 'Фотография удалена'
       error: 'Ошибка удаления фотографии'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Дата проведения'
+      owner: 'Организатор'
+      subject: 'Новый комментарий у события: %{event}'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Дата проведения'
+      owner: 'Организатор'
+      subject: 'Новая подписка на %{event}'
+    photo:
+      title: 'Новая фотография'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Дата проведения'
+      owner: 'Организатор'
+      subject: 'Новая фотография у события: %{event}'
