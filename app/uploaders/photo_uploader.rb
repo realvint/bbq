@@ -27,7 +27,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
 
-  process resize_to_fit: [800, 800]
+  process resize_to_fit: [800, 700]
 
   # process scale: [200, 300]
   #
@@ -38,7 +38,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
 
   version :thumb do
-    process resize_to_fit: [100, 100]
+    process resize_to_fit: [170, 170]
   end
 
   # Add an allowlist of extensions which are allowed to be uploaded.

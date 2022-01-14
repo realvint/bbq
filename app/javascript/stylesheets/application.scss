@@ -11,3 +11,14 @@ body {
 footer {
   margin-top: auto;
 }
+
+
+@media (max-width: 480px) {
+  .event-photos-gallery {
+    text-align: center;
+  }
+}
+
+.hide {
+  display: none;
+}
