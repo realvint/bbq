@@ -1,6 +1,6 @@
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
+// a relevant structure within app/frontend and only use these pack files to reference
 // that code so it'll be compiled.
 
 import Rails from '@rails/ujs'
@@ -16,6 +16,7 @@ import './utilities/add_photo_form'
 import './utilities/map'
 import Lightbox from 'bs5-lightbox'
 
+const images = require.context('../images', true)
 
 Rails.start()
 Turbolinks.start()

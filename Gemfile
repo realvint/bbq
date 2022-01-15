@@ -15,7 +15,6 @@ gem 'fog-aws'
 gem 'mailjet'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'rmagick'
-gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
