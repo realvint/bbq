@@ -2,7 +2,7 @@ document.addEventListener('turbolinks:load', function() {
   ymaps.ready(init);
 
   function init(){
-    if (document.getElementById('map') === null) return
+    if (!document.getElementById('map')) return
 
     const address = document.getElementById('map').getAttribute('data-address');
 
