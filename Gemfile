@@ -10,6 +10,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'carrierwave', '~> 2.0'
 gem 'devise'
 gem 'devise-i18n'
+gem 'dotenv-rails'
 gem 'fog-aws'
 gem 'mailjet'
 gem 'rails-i18n', '~> 6.0.0'
@@ -23,7 +24,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'dotenv-rails'
   gem 'letter_opener'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'web-console', '>= 4.1.0'
