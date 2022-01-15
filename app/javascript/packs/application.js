@@ -13,6 +13,7 @@ import 'stylesheets/application'
 import '@fortawesome/fontawesome-free/css/all'
 import './utilities/auto_hide_flash'
 import './utilities/add_photo_form'
+import './utilities/map'
 import Lightbox from 'bs5-lightbox'
 
 
