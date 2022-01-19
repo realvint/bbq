@@ -19,6 +19,12 @@ class EventPolicy < ApplicationPolicy
     update?
   end
 
+  class Scope < Scope
+    def resolve
+      scope.all
+    end
+  end
+
   private
 
   def user_is_owner?(event)
