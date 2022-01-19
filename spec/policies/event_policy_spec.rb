@@ -8,13 +8,13 @@ RSpec.describe EventPolicy do
   let(:event) { FactoryBot.create(:event, user: user) }
 
   context 'When the user is authenticated and is the event creator' do
-    permissions :show?, :edit?, :update?, :destroy? do
+    permissions :index?, :show?, :create?, :edit?, :update?, :destroy? do
       it { is_expected.to permit(user, event) }
     end
   end
 
   context 'When the user is authentificated but not the event creator' do
-    permissions :show? do
+    permissions :index?, :show?, :create? do
       it { is_expected.to permit(user, event) }
     end
 
@@ -24,11 +24,11 @@ RSpec.describe EventPolicy do
   end
 
   context 'When the user is not authentificated' do
-    permissions :show? do
+    permissions :index?, :show? do
       it { is_expected.to permit(nil, event) }
     end
 
-    permissions :edit?, :update?, :destroy? do
+    permissions :create?, :edit?, :update?, :destroy? do
       it { is_expected.not_to permit(nil, event) }
     end
   end
