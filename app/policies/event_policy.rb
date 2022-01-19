@@ -1,10 +1,14 @@
 class EventPolicy < ApplicationPolicy
+  def index?
+    true
+  end
+
   def show?
     true
   end
 
-  def edit?
-    update?
+  def create?
+    user.present?
   end
 
   def update?
@@ -13,12 +17,6 @@ class EventPolicy < ApplicationPolicy
 
   def destroy?
     update?
-  end
-
-  class Scope < Scope
-    def resolve
-      scope.all
-    end
   end
 
   private

@@ -1,16 +1,15 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, except: %i[show index]
   before_action :set_event, only: %i[show edit update destroy]
+  before_action :authorize_event
 
-  after_action :verify_authorized, only: %i[show edit update destroy]
+  after_action :verify_authorized
 
   def index
     @events = Event.all
   end
 
   def show
-    authorize @event
-
     @new_comment = @event.comments.build(params[:comment])
     @new_subscription = @event.subscriptions.build(params[:subscription])
     @all_event_subscribers = @event.subscriptions.except(@new_subscription)
@@ -21,9 +20,7 @@ class EventsController < ApplicationController
     @event = current_user.events.build
   end
 
-  def edit
-    authorize @event
-  end
+  def edit; end
 
   def create
     @event = current_user.events.build(event_params)
@@ -36,8 +33,6 @@ class EventsController < ApplicationController
   end
 
   def update
-    authorize @event
-
     if @event.update(event_params)
       redirect_to @event, notice: t('.updated')
     else
@@ -46,8 +41,6 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    authorize @event
-
     @event.destroy
     redirect_to events_path, notice: t('.destroyed')
   end
@@ -60,5 +53,9 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :address, :datetime, :description)
+  end
+
+  def authorize_event
+    authorize(@event || Event)
   end
 end
