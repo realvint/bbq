@@ -6,6 +6,9 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :mailjet
 
+  config.active_job.queue_adapter = :resque
+  config.active_job.queue_name_prefix = "bbq_#{Rails.env}"
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

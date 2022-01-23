@@ -24,9 +24,6 @@ module Bbq
     config.load_defaults 6.1
     config.i18n.default_locale = :ru
 
-    config.active_job.queue_adapter = :resque
-    config.active_job.queue_name_prefix = "bbq_#{Rails.env}"
-
     config.generators.system_tests = nil
   end
 end
