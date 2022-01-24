@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "BBQ" %></title>
+    <meta name="google-site-verification" content="h6bXhYNX4l3McF8Kxn6hmmVORp76kHr4zLsAhz0Btzo" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=<%= ENV['YANDEX_MAP_KEY'] %>&lang=ru_RU" type="text/javascript"></script>
     <%= csrf_meta_tags %>
