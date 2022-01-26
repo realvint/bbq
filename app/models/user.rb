@@ -13,8 +13,6 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
-  private
-
   def self.from_omniauth(access_token)
     user = User.where(email: access_token.info.email).first
 
@@ -25,6 +23,8 @@ class User < ApplicationRecord
     )
     user
   end
+
+  private
 
   def link_subscriptions
     Subscription.where(user_id: nil, user_email: self.email)
