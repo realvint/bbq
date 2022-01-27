@@ -50,6 +50,7 @@ ru:
       profession: 'в рамках курса:'
       title: 'Ruby on Rails с нуля за 18 недель'
       author: 'Автор проекта - Малухин Виктор'
+      privacy: 'Политика конфиденциальности'
 
   helpers:
     label:
