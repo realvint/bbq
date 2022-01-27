@@ -1,8 +1,8 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render 'shared/errors', resource: resource %>
 
-  <div class='form-control mb-3 shadow p-3 mb-5 bg-white rounded'  style='width: 400px; margin: 10% auto auto;'>
-    <div class='mb-3' style='margin: 25px 20px'>
+  <div class='shadow p-3 bg-white rounded devise-form'>
+    <div class='m-3'>
 
       <h2><%= t('.forgot_password') %></h2>
 

@@ -12,9 +12,19 @@ footer {
   margin-top: auto;
 }
 
+.devise-form {
+  width: 400px;
+  margin: 5% auto auto;
+}
+
 @media (max-width: 480px) {
   .event-photos-gallery {
     text-align: center;
+  }
+
+  .devise-form {
+    width: 100%;
+    margin: 0 auto auto;
   }
 }
 
