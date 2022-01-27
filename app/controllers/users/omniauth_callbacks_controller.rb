@@ -11,6 +11,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     handle_auth 'Vkontakte'
   end
 
+  def facebook
+    handle_auth 'Facebook'
+  end
+
   def handle_auth(kind)
     @user = User.from_omniauth(request.env['omniauth.auth'])
 

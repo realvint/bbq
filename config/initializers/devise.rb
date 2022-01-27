@@ -283,6 +283,10 @@ Devise.setup do |config|
                   Rails.application.credentials.dig(:vkontakte, :id),
                   Rails.application.credentials.dig(:vkontakte, :secret), scope: 'email'
 
+  config.omniauth :facebook,
+                  Rails.application.credentials.dig(:facebook, :id),
+                  Rails.application.credentials.dig(:facebook, :secret)
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
