@@ -1,9 +1,9 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render 'shared/errors', resource: resource %>
 
-  <div class='form-control mb-3 shadow p-3 mb-5 bg-white rounded' style='width: 400px; margin: 10% auto auto;'>
-    <div class='mb-3' style='margin: 25px 20px'>
-      <h2><%= t('.sign_up') %></h2>
+  <div class='shadow p-3 bg-white rounded devise-form'>
+    <div class='m-2'>
+      <h2 class="text-center"><%= t('.sign_up') %></h2>
 
       <div class='my-3'>
         <%= f.label :name, class: 'form-label' %>

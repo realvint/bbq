@@ -22,6 +22,8 @@ module Bbq
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    config.autoloader = :classic
+
     config.i18n.default_locale = :ru
 
     config.generators.system_tests = nil

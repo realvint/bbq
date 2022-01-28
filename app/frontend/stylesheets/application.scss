@@ -12,10 +12,9 @@ footer {
   margin-top: auto;
 }
 
-@media (max-width: 480px) {
-  .event-photos-gallery {
-    text-align: center;
-  }
+.devise-form {
+  width: 370px;
+  margin: 5% auto auto;
 }
 
 .hide {
@@ -58,6 +57,10 @@ footer {
 
 .thumbnail-inner {
   padding: 20px 4px 4px;
+}
+
+.oauth-icon {
+  width: 30px;
 }
 
 .user-avatar .img-icon {
@@ -124,4 +127,29 @@ footer {
 
 .event-photo {
   display: inline-block;
+}
+
+.d-flex-custom {
+  display: flex;
+}
+
+@media (max-width: 400px) {
+  .event-photos-gallery {
+    text-align: center;
+  }
+
+  .devise-form {
+    width: 100%;
+    margin: 0 auto auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .d-flex-custom {
+    display: block;
+  }
+
+  .mobile-padding {
+    margin-top: 10px;
+  }
 }
