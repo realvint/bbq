@@ -12,14 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2022_01_07_180035) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "comments", force: :cascade do |t|
     t.string "body"
     t.string "username"
-    t.bigint "event_id", null: false
-    t.bigint "user_id"
+    t.integer "event_id", null: false
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_comments_on_event_id"
@@ -33,14 +30,14 @@ ActiveRecord::Schema.define(version: 2022_01_07_180035) do
     t.datetime "datetime", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|
     t.string "photo"
-    t.bigint "event_id", null: false
-    t.bigint "user_id", null: false
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_photos_on_event_id"
@@ -50,8 +47,8 @@ ActiveRecord::Schema.define(version: 2022_01_07_180035) do
   create_table "subscriptions", force: :cascade do |t|
     t.string "user_name"
     t.string "user_email"
-    t.bigint "event_id", null: false
-    t.bigint "user_id"
+    t.integer "event_id", null: false
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_subscriptions_on_event_id"
